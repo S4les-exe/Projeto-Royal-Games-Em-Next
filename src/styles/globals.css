@@ -6,12 +6,17 @@
     font-family: var(--font-padrao);
 }
 
+a{
+    text-decoration: none;
+}
+
 :root{
-    --fundo-claro: #f1f1f1;
-    --fundo-escuro: #232122;
-    --laranja-destaque: #FFA300;
-    --vinho: #451201;
-    --fonte-escura: #000000;
+    --vermelho-contraste: #FF004C;
+    --roxo: #7A3BFF;
+    --branco: #FFFFFF;
+    --branco-roxeado: #D6D2E6;
+    --preto: #0B0616;
+    --preto-roxeado: #221C2D;
 
     --tamanho-titulo: 50px;
     --tamanho-texto-btn: 17px;

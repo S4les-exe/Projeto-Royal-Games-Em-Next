@@ -2,11 +2,13 @@ import styles from "@/components/header/header.module.css"
 
 const Header = () => {
     return(
-        <header>
-            <img src="../imgs/LogoHeader.png" alt="Logo Royal Games" />
-            <div id={styles.div_botoes}>
-                <a href="">Catalogo</a>
-                <button>Login</button>
+        <header id={styles.header}>
+            <div className={`${styles.container} layout_guide`}>
+                <img src="../imgs/LogoHeader.png" alt="Logo Royal Games" />
+                <div id={styles.div_botoes}>
+                    <a href="">Catalogo</a>
+                    <button>Login</button>
+                </div>
             </div>
         </header>
     )
