@@ -2,8 +2,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
-    font-family: var(--font-padrao);
+    background-color: var(--preto-roxeado);
+    color: var(--branco);
 }
 
 a{
@@ -17,9 +17,6 @@ a{
     --branco-roxeado: #D6D2E6;
     --preto: #0B0616;
     --preto-roxeado: #221C2D;
-
-    --tamanho-titulo: 50px;
-    --tamanho-texto-btn: 17px;
 }
 
 .layout_guide{

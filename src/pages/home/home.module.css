@@ -1,0 +1,7 @@
+#banner{
+    display: flex;
+    flex-direction: row;
+    height: 90vh;
+    justify-content: space-between;
+    align-items: center;
+}

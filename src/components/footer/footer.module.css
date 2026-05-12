@@ -1,0 +1,29 @@
+#footer{
+    height: 20vh;
+    display: flex;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    height: 100%;
+    font-family: var(--font-padrao);
+}
+
+.container img{
+    width: 387px;
+    height: 144px;
+}
+
+#informacoes{
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5rem;
+    gap: 20px;
+}

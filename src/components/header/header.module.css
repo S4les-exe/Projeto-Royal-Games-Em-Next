@@ -4,6 +4,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 60px 0px;
 }
 
 .container{
@@ -11,6 +12,9 @@
     flex-direction: row;
     justify-content: space-between;
     width: 90%;
+    font-family: var(--font-padrao);
+    font-weight: 400;
+    font-size: 1.2rem;
 }
 
 #div_botoes{
@@ -21,10 +25,23 @@
     align-items: center;
 }
 
-#div_botoes button{
+#btn_login{
+    display: flex;
     height: 50px;
-    width: 130px;
+    width: 140px;
     background-color: transparent;
     border-radius: 15px;
-    border: 2px solid var(--);
+    border: 2px solid var(--vermelho-contraste);
+    font-size: 1.2rem;
+    font-family: var(--font-padrao);
+    font-weight: 400;
+}
+
+#btn_login a{
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

@@ -7,7 +7,7 @@ const Header = () => {
                 <img src="../imgs/LogoHeader.png" alt="Logo Royal Games" />
                 <div id={styles.div_botoes}>
                     <a href="">Catalogo</a>
-                    <button>Login</button>
+                    <button id={styles.btn_login}><a href="login">Login</a></button>
                 </div>
             </div>
         </header>
