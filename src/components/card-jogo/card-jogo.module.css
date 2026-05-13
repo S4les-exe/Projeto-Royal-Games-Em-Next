@@ -1,0 +1,39 @@
+#card{
+    width: 377px;
+    height: 477px;
+    box-shadow: rgb(22, 6, 44) 1px 1px 30px 5px inset, rgb(255, 255, 255) -5px -5px 10px -4px inset;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+    font-family: var(--font-titulo);
+    border-radius: 10px;
+    padding: 20px 0px;
+}
+
+#card h1{
+    font-weight: 600;
+    font-size: 1.7rem;
+}
+
+#card p{
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+#card a{
+    font-weight: 600;
+    background-color: var(--vermelho-contraste);
+    width: 50%;
+    font-size: 1.2rem;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+}
+
+#card img{
+    width: 80%;
+    border-radius: 6px;
+}

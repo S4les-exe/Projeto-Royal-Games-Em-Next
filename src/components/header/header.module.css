@@ -5,6 +5,8 @@
     align-items: center;
     justify-content: center;
     padding: 60px 0px;
+    background: #221C2D;
+    background: linear-gradient(180deg,rgb(24, 18, 36) 27%, rgba(0, 0, 0, 0) 100%);
 }
 
 .container{
@@ -15,6 +17,11 @@
     font-family: var(--font-padrao);
     font-weight: 400;
     font-size: 1.2rem;
+    background-color: transparent
+}
+
+.container img{
+    background-color: transparent;
 }
 
 #div_botoes{
@@ -23,6 +30,11 @@
     width: 20%;
     justify-content: space-between;
     align-items: center;
+    background-color: transparent;
+}
+
+#div_botoes a{
+    background-color: transparent;
 }
 
 #btn_login{
