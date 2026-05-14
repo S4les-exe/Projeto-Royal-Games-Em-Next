@@ -17,8 +17,9 @@ a{
     --branco-roxeado: #D6D2E6;
     --preto: #0B0616;
     --preto-roxeado: #221C2D;
+    --fundo-input: #464052;
 }
 
 .layout_guide{
-    width: 80%;
+    width: 90%;
 }

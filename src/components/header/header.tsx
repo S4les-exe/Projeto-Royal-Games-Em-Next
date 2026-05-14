@@ -6,7 +6,7 @@ const Header = () => {
             <div className={`${styles.container} layout_guide`}>
                 <img src="../imgs/LogoHeader.png" alt="Logo Royal Games" />
                 <div id={styles.div_botoes}>
-                    <a href="">Catalogo</a>
+                    <a href="" id={styles.catalogo}>Catalogo</a>
                     <button id={styles.btn_login}><a href="login">Login</a></button>
                 </div>
             </div>

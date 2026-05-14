@@ -13,7 +13,6 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 90%;
     font-family: var(--font-padrao);
     font-weight: 400;
     font-size: 1.2rem;
@@ -33,8 +32,12 @@
     background-color: transparent;
 }
 
-#div_botoes a{
+#catalogo{
     background-color: transparent;
+}
+
+#catalogo:hover{
+    color: rgb(161, 161, 161);
 }
 
 #btn_login{
@@ -49,6 +52,10 @@
     font-weight: 400;
 }
 
+#btn_login:hover{
+    background-color: var(--vermelho-contraste);
+}
+
 #btn_login a{
     width: 100%;
     height: 100%;
@@ -56,4 +63,5 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: transparent;
 }

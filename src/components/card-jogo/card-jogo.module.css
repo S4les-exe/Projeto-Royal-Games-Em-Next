@@ -1,6 +1,6 @@
 #card{
-    width: 377px;
-    height: 477px;
+    width: 480px;
+    height: 650px;
     box-shadow: rgb(22, 6, 44) 1px 1px 30px 5px inset, rgb(255, 255, 255) -5px -5px 10px -4px inset;
     display: flex;
     align-items: center;
@@ -31,6 +31,10 @@
     align-items: center;
     justify-content: center;
     border-radius: 6px;
+}
+
+#card a:hover{
+    background-color: rgb(197, 37, 37);
 }
 
 #card img{
