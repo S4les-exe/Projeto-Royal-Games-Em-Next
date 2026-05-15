@@ -30,6 +30,22 @@ const Home = () => {
                 </div>
             </section>
 
+            {/* *****************************PARTE DO MEME********************** */}
+            <section id={styles.informacao_jogos}>
+                <div className={`${styles.container_informacao} layout_guide`}>
+                    <div id={styles.cabecalho_informacao}>
+                        <h1>Jogos online podem afetar o comportamento humano?</h1>
+                        <hr />
+                    </div>
+
+                    <div id={styles.area_imagens}>
+                        <img src="../imgs/lol_informacao.png" alt="logo da jogo league of legends" />
+                        <img src="../imgs/csgo.png" alt="logo do jogo counter strike" />
+                    </div>
+                    <p> Estudos indicam que jogos podem alterar o comportamento humano… Principalmente quando o time resolve testar sua paciência em plena partida ranqueada.</p>
+                </div>
+            </section>
+
             {/* *****************************FOOTER********************************* */}
             <Footer />
         </>

@@ -1,0 +1,31 @@
+#detalhe_jogo{
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+#cabecalho{
+    display: flex;
+    width: fit-content;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    justify-content: center;
+    font-family: var(--font-titulo);
+}
+
+#cabecalho h1{
+    color: var(--branco-roxeado);
+}
+
+#cabecalho hr{
+    width: 120%;
+    border: 1px solid var(--vermelho-contraste);
+}

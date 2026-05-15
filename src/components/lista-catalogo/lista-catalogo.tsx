@@ -26,6 +26,15 @@ const ListaCatalogo = () => {
                 <CardJogo/>
                 <CardJogo/>
             </div>
+            <ul id={styles.navegacao}>
+                <li id={styles.seta}><img src="../imgs/seta-esquerda.png" alt="seta para a esquerda" /></li>
+                <li id={styles.numeros}>1</li>
+                <li id={styles.numeros}>2</li>
+                <li id={styles.numeros}>3</li>
+                <li id={styles.numeros}>4</li>
+                <li id={styles.numeros}>5</li>
+                <li id={styles.seta}><img src="../imgs/seta-direita.png" alt="seta para a direita" /></li>
+            </ul>
         </main>
     )
 } 

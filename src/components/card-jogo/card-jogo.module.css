@@ -1,14 +1,14 @@
 #card{
     width: 480px;
-    height: 650px;
+    height: 610px;
     box-shadow: rgb(22, 6, 44) 1px 1px 30px 5px inset, rgb(255, 255, 255) -5px -5px 10px -4px inset;
     display: flex;
     align-items: center;
     flex-direction: column;
-    gap: 15px;
+    gap: 25px;
     font-family: var(--font-titulo);
     border-radius: 10px;
-    padding: 20px 0px;
+    padding: 25px 0px;
 }
 
 #card h1{

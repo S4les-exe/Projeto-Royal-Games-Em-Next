@@ -1,0 +1,79 @@
+#main{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 100vh;
+    width: 100vw;
+    align-items: center;
+}
+
+#imagem_login{
+    display: flex;
+    height: 100%;
+}
+
+#campo_login{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 85px;
+    box-shadow: rgb(22, 6, 44) 1px 1px 30px 5px inset, rgb(255, 255, 255) -5px -5px 10px -4px inset;
+    height: 80%;
+    width: 530px;
+    border-radius: 10px;
+    padding: 50px 0px;
+}
+
+#campo_login img{
+    background-color: transparent;
+}
+
+#formulario{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: var(--font-padrao);
+    gap: 80px;
+    width: 100%;
+    background-color: transparent;
+}
+
+#campos{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 80%;
+}
+
+.campo{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.campo input{
+    border-radius: 6px;
+    width: 100%;
+    height: 50px;
+    background-color: var(--fundo-input);
+    outline-color: var(--vermelho-contraste);
+    font-family: var(--font-padrao);
+}
+
+#formulario button{
+    height: 50px;
+    width: 166px;
+    background-color: transparent;
+    border: 2px solid var(--vermelho-contraste);
+    border-radius: 10px;
+    font-family: var(--font-padrao);
+    font-size: 1.25rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#formulario button:hover{
+    background-color: var(--vermelho-contraste);
+}
