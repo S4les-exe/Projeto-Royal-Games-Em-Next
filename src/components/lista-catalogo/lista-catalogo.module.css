@@ -4,6 +4,7 @@
     flex-direction: column;
     width: 100%;
     gap: 75px;
+    background-color: transparent;
 }
 
 #area_filtros{
@@ -40,6 +41,7 @@
     width: 100%;
     justify-items: center;
     gap: 50px;
+    background-color: transparent;
 }
 
 #navegacao{
@@ -47,6 +49,7 @@
     flex-direction: row;
     gap: 50px;
     list-style: none;
+    background-color: transparent;
 }
 
 #navegacao li{
@@ -57,6 +60,7 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    background-color: transparent;
 }
 
 #numeros{

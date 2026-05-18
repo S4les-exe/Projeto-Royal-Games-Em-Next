@@ -23,6 +23,10 @@
     background-color: transparent;
 }
 
+.container a{
+    background-color: transparent;
+}
+
 #div_botoes{
     display: flex;
     flex-direction: row;

@@ -1,14 +1,23 @@
 #detalhe_jogo{
     display: flex;
-    height: 100vh;
+    min-height: 90vh;
     align-items: center;
     justify-content: center;
+    padding: 2% 0px;
+    background: radial-gradient( ellipse 130% 57% at left,  #523BFF -281%, #221C2D 90%);
 }
 
-.container{
+.container_detalhe{
     display: flex;
     flex-direction: column;
-    
+    align-items: center;
+    box-shadow: rgb(22, 6, 44) 1px 1px 30px 5px inset, rgb(255, 255, 255) -5px -5px 10px -4px inset;
+    justify-content: center;
+    padding: 3% 5%;
+    border-radius: 6px;
+    gap: 60px;
+    box-sizing: border-box;
+    background-color: transparent;
 }
 
 #cabecalho{
@@ -17,15 +26,105 @@
     flex-direction: column;
     align-items: center;
     gap: 5px;
+    background-color: transparent;
     justify-content: center;
     font-family: var(--font-titulo);
 }
 
 #cabecalho h1{
     color: var(--branco-roxeado);
+    background-color: transparent;
 }
 
 #cabecalho hr{
     width: 120%;
     border: 1px solid var(--vermelho-contraste);
+}
+
+#descricao{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: transparent;
+}
+
+#descricao img{
+    display: flex;
+    width: 45%;
+    height: auto;
+    object-fit: cover;
+    background-color: transparent;
+}
+
+#descricao_jogo{
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    width: 50%;
+    gap: 25px;
+}
+
+#descricao_jogo h2{
+    font-family: var(--font-titulo);
+    font-size: 2rem;
+    background-color: transparent;
+}
+
+#descricao_jogo p{
+    font-family: var(--font-padrao);
+    font-size: 1.2rem;
+    background-color: transparent;
+}
+
+#detalhes{
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    justify-content: space-between;
+    background-color: transparent;
+}
+
+#detalhes h3{
+    font-family: var(--font-titulo);
+    background-color: transparent;
+}
+
+#detalhes_esquerda ul{
+    list-style-type: none;
+    gap: 30px;
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+}
+
+#detalhes_esquerda li{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-family: var(--font-padrao);
+    font-size: 1.2rem;
+    gap: 10px;
+    background-color: transparent;
+}
+
+#detalhes_direita{
+    background-color: transparent;
+}
+
+#detalhes_direita ul{
+    list-style-type: none;
+    gap: 30px;
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+}
+
+#detalhes_direita li{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-family: var(--font-padrao);
+    font-size: 1.2rem;
+    gap: 10px;
+    background-color: transparent;
 }
