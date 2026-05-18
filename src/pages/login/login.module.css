@@ -24,8 +24,8 @@
     align-items: center;
     gap: 85px;
     box-shadow: rgb(22, 6, 44) 1px 1px 30px 5px inset, rgb(255, 255, 255) -5px -5px 10px -4px inset;
-    height: 80%;
-    width: 530px;
+    height: 70%;
+    width: 580px;
     border-radius: 10px;
     padding: 50px 0px;
 }
@@ -64,6 +64,8 @@
     background-color: var(--fundo-input);
     outline-color: var(--vermelho-contraste);
     font-family: var(--font-padrao);
+    padding-left: 15px;
+    align-items: center;
 }
 
 #formulario button{
