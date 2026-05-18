@@ -21,7 +21,7 @@ const Home = () => {
             </section>
 
             {/* **************************CATALOGO***************************** */}
-            <section id={styles.catalogo}>
+            <section className={styles.catalogo} id="catalago">
                 <div className={`${styles.container_catalogo} layout_guide`}>
                     <div id={styles.cabecalho}>
                        <h1>Catálogo de jogos</h1><hr />
