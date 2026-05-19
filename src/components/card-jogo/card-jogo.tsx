@@ -1,13 +1,21 @@
 import styles from "@/components/card-jogo/card-jogo.module.css";
-import Link from "next/link";
+import { formatarPreco } from "@/utils/formatacao";
 
-const CardJogo = () => {
+type Jogo = {
+    jogoID: number,
+    nome: string,
+    preco: number,
+    descricao: string,
+    imagemUrl: string
+}
+
+const CardJogo = ({jogoID, nome, preco, descricao, imagemUrl}: Jogo) => {
     return(
         <article id={styles.card}>
-            <img src="../imgs/cod.png" alt="imagem ilustrativa da capa do jogo vendido" className={styles.imagem_jogo}/>
-            <h2>Call of Duty</h2>
-            <p id={styles.preco}>R$70,00</p>
-            <a href="/detalhe-jogo">Detalhes</a>
+            <img src={imagemUrl} alt="imagem ilustrativa da capa do jogo vendido" className={styles.imagem_jogo}/>
+            <h2>{nome}</h2>
+            <p id={styles.preco}>{formatarPreco(preco)}</p>
+            <a href="/detalhe-jogo/">Detalhes</a>
         </article>
     )
 } 

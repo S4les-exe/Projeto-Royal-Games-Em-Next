@@ -1,17 +1,7 @@
 import styles from "@/pages/home/home.module.css"
 import Header from "@/components/header/header";
 import Footer from "@/components/footer/footer";
-import CardJogo from "@/components/card-jogo/card-jogo";
 import ListaCatalogo from "@/components/lista-catalogo/lista-catalogo";
-
-interface Jogo{
-    titulo: string,
-    descricao: string, 
-    imagemUrl: string,
-    preco: number,
-    produtoID: number,
-    // 
-}
 
 const Home = () => {
     return (
@@ -35,7 +25,7 @@ const Home = () => {
                     <div id={styles.cabecalho}>
                        <h1>Catálogo de jogos</h1><hr />
                     </div>
-                    <CardJogo/>
+                    <ListaCatalogo />
                 </div>
             </section>
 
