@@ -2,6 +2,14 @@ import Footer from "@/components/footer/footer";
 import Header from "@/components/header/header";
 import styles from "@/pages/detalhe-jogo/detalhe-jogo.module.css";
 
+interface Jogo{
+    nome: string;
+    descricao: string;
+    preco: number;
+    imagemUrl: string; 
+    generos: string[]
+}
+
 const DetalheJogo = () => {
     return(
         <>

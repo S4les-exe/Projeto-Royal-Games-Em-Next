@@ -2,6 +2,7 @@ import styles from "@/components/lista-catalogo/lista-catalogo.module.css"
 import CardJogo from "../card-jogo/card-jogo";
 import { listarJogo } from "@/pages/api/jogoService";
 import { useEffect, useState } from "react";
+import { listarGenero } from "@/pages/api/generoService";
 
 interface Jogo{
     jogoID: number,
@@ -9,9 +10,14 @@ interface Jogo{
     preco: number, 
     imagemUrl: string,
     descricao: string,
-    statusJogo: boolean
+    statusJogo: boolean,
+    generoIds: number,
 }
 
+interface Genero{
+    generoID: number;
+    nome: string,
+}
 
 const ListaCatalogo = () => {
 
@@ -19,7 +25,11 @@ const ListaCatalogo = () => {
     //salvar as informacoes de filtro 
     const[ordem, setOrdem] = useState("todos");
     //salva oque for escrito pelo usuario 
+    const[ordemGenero, setOrdemGenero] = useState("todos")
     const[pesquisa, setPesquisa] = useState("");
+    //filtro de genero
+    const[generos, setGeneros] = useState<Genero[]>([]);
+    const[generosSelecionados, setGenerosSelecionados] = useState<number[]>([]);
 
     async function listar(){
         try{
@@ -33,10 +43,10 @@ const ListaCatalogo = () => {
 
     useEffect(() => {
         listar();
+        listarGen();
     }, []) 
 
     const jogosFiltrados = jogos.filter((jogo) => jogo.nome.toLowerCase().includes(pesquisa.toLowerCase()))
-    
     .sort((a, b) => {
         if(ordem === "menor_valor"){
             return a.preco - b.preco
@@ -46,6 +56,15 @@ const ListaCatalogo = () => {
 
         return a.jogoID - b.jogoID;
     });
+
+    // const generoFiltrados = generos.filter((item) => item.nome == )
+
+    async function listarGen(){
+        const lista = await listarGenero()
+
+        setGeneros(lista.data);
+        console.log(lista.data);
+    }
 
     return(
         <main id={styles.main}>
@@ -60,11 +79,12 @@ const ListaCatalogo = () => {
                     <option value="maior_valor">Maior Preço</option>
                     <option value="menor_valor">Menor Preço</option>
                 </select>
-                <select id={styles.filtrar_categoria}>Categoria
-                    <option value="">Ação</option>
-                    <option value="">Fantasia</option>
-                    <option value="">Sport</option>
-                    <option value="">Aventura</option>
+                <select id={styles.filtrar_categoria} size={1} value={ordemGenero}
+                >
+                    {generos.map((item) => (
+                        <option value={item.generoID} key={item.generoID}>{item.nome}</option>
+                    )
+                    )}
                 </select>
             </div>
             <div id={styles.jogos}>
@@ -78,7 +98,7 @@ const ListaCatalogo = () => {
                         imagemUrl={item.imagemUrl}
                     />
                 )) : (
-                    <p id={styles.carregando}>Carregando produto...</p>
+                    <p id={styles.carregando}>Carregando jogos...</p>
                 )}
                 
             </div>
