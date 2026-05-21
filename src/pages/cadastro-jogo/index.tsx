@@ -2,8 +2,98 @@ import Footer from "@/components/footer/footer";
 import Header from "@/components/header/header";
 import ListaCatalogo from "@/components/lista-catalogo/lista-catalogo";
 import styles from "@/pages/cadastro-jogo/cadastro-jogo.module.css"
+import { useRouter } from "next/router";
+import { useState } from "react";
+import { cadastrarJogo, editarJogo, listarPorId } from "../api/jogoService";
+import { notificacao } from "@/utils/toast";
+
+interface Genero{
+    generoID: number[],
+    nome: string
+}
+
+interface Plataforma{
+    plataformasIds: number[],
+    nome: string
+}
+
+interface ClassificacaoIndicativa{
+    classificacaoIndicativaID: number,
+    classificacao: string
+}
 
 const CadastroJogo = () => {
+
+    const[genero, setGenero] = useState<Genero[]>([]);
+    const[plataforma, setPlataforma] = useState<Plataforma[]>([]);
+    const[classificacaoIndicativa, setClassificacaoIndicativa] = useState<ClassificacaoIndicativa[]>([]);
+
+    const[nome, setNome] = useState<string>("");
+    const[descricao, setDescricao] = useState<string>("");
+    const[preco, setPreco] = useState<string>("");
+    const[imagem, setImagem] = useState<File | null>(null);
+
+    const[generosSelecionados, setGenerosSelecionados] = useState<number[]>([]);
+    const[plataformasSelecionadas, setPlataformaSelecionadas] = useState<number[]>([]);
+    const[classificacaoSelecionada, setClassificacaoSelecionada] = useState<number>(0);
+
+    const[estaAutenticado, setEstaAutenticado] = useState(false); 
+
+    const router = useRouter();
+    const id = router.query.id; 
+    //console.log(id);
+    let telaEditar = false;
+
+    if(id){
+        telaEditar = true
+    }
+    console.log(telaEditar);
+
+    async function carregarInformacoes(){
+      if(!id) return;
+
+      const jogo = await listarPorId(Number(id))
+      setNome(jogo.nome);
+      setDescricao(jogo.descricao);
+      setPreco(jogo.preco);
+      setGenerosSelecionados(jogo.generoIds);
+      setPlataformaSelecionadas(jogo.plataformasIds);
+      setClassificacaoIndicativa(jogo.classificacaoIndicativaID);
+    }
+
+    async function salvarJogo(e: React.FormEvent<HTMLFormElement>){
+        e.preventDefault();
+        try{
+            const dados = {
+                nome,
+                descricao,
+                imagem,
+                preco,
+                generoIds: generosSelecionados,
+                plataformasIds: plataformasSelecionadas,
+                classificacaoIndicativaID: classificacaoSelecionada,
+            }
+
+            //await cadastrarProduto(dados);
+            
+            if(telaEditar){
+              await editarJogo(Number(id), dados)
+              notificacao("Jogo editado!");
+            }
+            else{
+              await cadastrarJogo(dados);
+              notificacao("Jogo cadastrado!");
+            }
+            console.log(dados)
+        }catch(error:any){
+            throw new Error(error.message);
+        }
+    }
+
+    if(!estaAutenticado){
+        return null;
+    }
+
     return(
         <>
             <Header/>

@@ -1,5 +1,6 @@
 import styles from "@/components/card-jogo/card-jogo.module.css";
 import { formatarPreco } from "@/utils/formatacao";
+import Link from "next/link";
 
 type Jogo = {
     jogoID: number,
@@ -15,7 +16,9 @@ const CardJogo = ({jogoID, nome, preco, descricao, imagemUrl}: Jogo) => {
             <img src={imagemUrl} alt="imagem ilustrativa da capa do jogo vendido" className={styles.imagem_jogo}/>
             <h2>{nome}</h2>
             <p id={styles.preco}>{formatarPreco(preco)}</p>
-            <a href="/detalhe-jogo/">Detalhes</a>
+            <Link href={"/detalhe-jogo/" + jogoID}>
+                Detalhes
+            </Link>
         </article>
     )
 } 
